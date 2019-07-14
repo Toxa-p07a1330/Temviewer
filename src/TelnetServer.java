@@ -93,14 +93,5 @@ class TelnetTester
     public static void main(String[] args) {
        TelnetServer telnetServer = new TelnetServer();
        telnetServer.run(6666);
-       try {
-           Thread.sleep(5000);
-       }
-       catch (Exception e)
-       {
-           System.out.println(e.getMessage());
-       }
-       telnetServer.stop();
-
     }
 }
