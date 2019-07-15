@@ -44,13 +44,25 @@ public class TelnetServer {
                 buffer = buffer.substring(0, buffer.length()-2);
 
                 try {
-                    Runtime.getRuntime().exec("cmd /c copy NUL "+wayToTemp);
-                    if (buffer.indexOf('>')!=-1)
-                        Runtime.getRuntime().exec("cmd /c " + buffer);      //for writing only
-                    else
-                        Runtime.getRuntime().exec("cmd /c chcp 65001 && " + buffer + " > " + wayToTemp + " 2>&1");
-                    Thread.sleep(100);
-                    Scanner scanner = new Scanner(new BufferedReader(new FileReader(new File(wayToTemp))));
+                    ProcessBuilder pb = new ProcessBuilder(buffer);
+                    File temp = new File (wayToTemp);
+
+                    try {
+                        pb.redirectError(temp);
+                        pb.redirectOutput(temp);
+                        pb.start();
+                        Thread.sleep(100);
+                    }
+                    catch (Exception e)
+                    {
+                        Runtime.getRuntime().exec("cmd /c copy NUL "+wayToTemp);
+                        if (buffer.indexOf('>')!=-1)
+                            Runtime.getRuntime().exec("cmd /c " + buffer);      //for writing only
+                        else
+                            Runtime.getRuntime().exec("cmd /c chcp 65001 && " + buffer + " > " + wayToTemp + " 2>&1");
+                        Thread.sleep(100);
+                    }
+                    Scanner scanner = new Scanner(new BufferedReader(new FileReader(temp)));
                     while (scanner.hasNextLine()) {
                         String line = scanner.nextLine();
                         for (char ch : line.toCharArray())
@@ -93,5 +105,7 @@ class TelnetTester
     public static void main(String[] args) {
        TelnetServer telnetServer = new TelnetServer();
        telnetServer.run(6666);
+       TelnetServer telnetServer1 = new TelnetServer();
+       telnetServer1.run(7777);
     }
 }

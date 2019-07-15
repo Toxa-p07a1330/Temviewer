@@ -8,8 +8,7 @@ public class TelnetClient
     public void run(String ip, int port)
     {
         try {
-            ip = "127.0.0.1";       //debug
-            port = 6666;
+
             Socket socket = new Socket(ip, port);
             InputStream sin = socket.getInputStream();
             OutputStream sout = socket.getOutputStream();
@@ -56,6 +55,11 @@ class TelnetClientTester
 {
     public static void main(String[] args) {
         TelnetClient telnetClient = new TelnetClient();
-        telnetClient.run("127.0.0.0", 6666);
+        Scanner keyboard = new Scanner(System.in);
+        int port;
+        String ip = new String();
+        ip = keyboard.nextLine();
+        port = keyboard.nextInt();
+        telnetClient.run(ip, port);
     }
 }
