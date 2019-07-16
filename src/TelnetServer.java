@@ -61,8 +61,7 @@ public class TelnetServer {
                                 sout.write('\r');
                             }
                         }
-                        catch (Exception e)
-                        {
+                        catch (Exception e) {
                             String output = "Something gets wrong... Err code: "+ e.getStackTrace();
                             System.out.println(output);
                             for (char i : output.toCharArray())
@@ -86,8 +85,7 @@ public class TelnetServer {
 
             }
         }
-        catch(Exception x)
-        {
+        catch(Exception x) {
             System.out.println(x.getMessage());
         }})).start();
 
