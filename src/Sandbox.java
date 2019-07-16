@@ -1,6 +1,4 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+import java.io.*;
 import java.util.Scanner;
 
 public class Sandbox
@@ -8,19 +6,33 @@ public class Sandbox
     public static void main(String[] args) {
 
 
-        String wayToTemp = new String();
-        String buffer = new String();
-        wayToTemp = "C:\\Temp\\temporary.txt";
+        final String wayToTemp = new String("C:\\Temp\\temporary.txt");
         Scanner keyboard  = new Scanner(System.in);
         while (true)
         {
-            buffer = keyboard.nextLine();
-            try {
-                ProcessBuilder pb = new ProcessBuilder(buffer);
-                File temp = new File (wayToTemp);
-
-
+            final String buffer = "cmd /c "+keyboard.nextLine();
+            new Thread(()-> {
                 try {
+                    ProcessBuilder pb = new ProcessBuilder(buffer);
+                    File temp = new File(wayToTemp);
+                    Process p = Runtime.getRuntime().exec(buffer);
+                    InputStream out = p.getInputStream();
+                    InputStream err = p.getErrorStream();
+                    Scanner errs = new Scanner(err);
+                    Scanner fromProcess = new Scanner(out);
+                    while (fromProcess.hasNextLine()) {
+                        System.out.println(fromProcess.nextLine());
+                    }
+                    while (errs.hasNextLine()) {
+                        System.out.println(errs.nextLine());
+                    }
+                    p.getErrorStream().close();
+                    p.getOutputStream().close();
+                    p.getInputStream().close();
+
+
+                }
+               /* try {
                     pb.redirectError(temp);
                     pb.redirectOutput(temp);
                     pb.start();
@@ -41,11 +53,10 @@ public class Sandbox
                         System.out.println(reader.nextLine());
                 }
                 Runtime.getRuntime().exec("cmd /c copy NUL "+wayToTemp);
-            }
-            catch (Exception e)
-            {
-                System.out.println("Error: "+e.getMessage());
-            }
+            }*/ catch (Exception e) {
+                    System.out.println("Error: " + e.getMessage());
+                }
+            }).start();
         }
     }
 }
