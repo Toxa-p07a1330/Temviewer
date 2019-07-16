@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="59ff44e6-3d84-49bc-876c-7c94a64943a5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/TelnetServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/TelnetServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/TelnetTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/TelnetTester.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Sandbox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sandbox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TelnetServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TelnetServer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TelnetServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1350">
-              <caret line="79" column="35" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
+            <state relative-caret-position="205">
+              <caret line="52" column="29" lean-forward="true" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -29,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Sandbox.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+            <state relative-caret-position="108">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,8 +97,8 @@
         <option value="$PROJECT_DIR$/src/Server.java" />
         <option value="$PROJECT_DIR$/src/TestServer.java" />
         <option value="$PROJECT_DIR$/../MailSender/src/Sender.java" />
-        <option value="$PROJECT_DIR$/src/TelnetServer.java" />
         <option value="$PROJECT_DIR$/src/Sandbox.java" />
+        <option value="$PROJECT_DIR$/src/TelnetServer.java" />
       </list>
     </option>
   </component>
@@ -113,7 +116,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -142,6 +144,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -166,7 +169,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Sandbox">
+  <component name="RunManager" selected="Application.TelnetServer">
     <configuration name="Sandbox" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Sandbox" />
       <module name="Server" />
@@ -236,7 +239,8 @@
       <workItem from="1563283588736" duration="1616000" />
       <workItem from="1563285397323" duration="1808000" />
       <workItem from="1563288683413" duration="1762000" />
-      <workItem from="1558107654865" duration="289000" />
+      <workItem from="1558107654865" duration="1764000" />
+      <workItem from="1563293465217" duration="552000" />
     </task>
     <task id="LOCAL-00001" summary="Finished work with Telnet Server">
       <created>1563208961373</created>
@@ -252,11 +256,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563289455638</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Successful refactoring of input">
+      <created>1563292132754</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1563292132754</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35181000" />
+    <option name="totallyTimeSpent" value="37208000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -271,7 +282,7 @@
     <frame x="-4" y="-4" width="1928" height="1060" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3200213" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3232162" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -280,7 +291,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32908705" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.24097665" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24097665" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -290,7 +301,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.3280255" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3280255" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -307,7 +318,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Finished work with Telnet Server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished work with Telnet Server" />
+    <MESSAGE value="Successful refactoring of input" />
+    <option name="LAST_COMMIT_MESSAGE" value="Successful refactoring of input" />
   </component>
   <component name="editorHistoryManager">
     <entry file="uml://JAVA/TelnetServer">
@@ -344,8 +356,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TelnetServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="79" column="35" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
+        <state relative-caret-position="205">
+          <caret line="52" column="29" lean-forward="true" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sandbox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -373,16 +395,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sandbox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

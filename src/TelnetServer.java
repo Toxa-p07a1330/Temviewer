@@ -41,46 +41,46 @@ public class TelnetServer {
                 }
 
 
-                buffer = buffer.substring(0, buffer.length()-2);
+                final String inputToSubThread = "cmd /c " + buffer.substring(0, buffer.length()-2) + " 2>&1";
 
-                try {
-                    ProcessBuilder pb = new ProcessBuilder(buffer);
-                    File temp = new File (wayToTemp);
 
+                new Thread(()-> {
                     try {
-                        pb.redirectError(temp);
-                        pb.redirectOutput(temp);
-                        pb.start();
-                        Thread.sleep(100);
-                    }
-                    catch (Exception e)
-                    {
-                        Runtime.getRuntime().exec("cmd /c copy NUL "+wayToTemp);
-                        if (buffer.indexOf('>')!=-1)
-                            Runtime.getRuntime().exec("cmd /c " + buffer);      //for writing only
-                        else
-                            Runtime.getRuntime().exec("cmd /c chcp 65001 && " + buffer + " > " + wayToTemp + " 2>&1");
-                        Thread.sleep(100);
-                    }
-                    Scanner scanner = new Scanner(new BufferedReader(new FileReader(temp)));
-                    while (scanner.hasNextLine()) {
-                        String line = scanner.nextLine();
-                        for (char ch : line.toCharArray())
-                        {
-                            sout.write(ch);
-                            //System.out.print(ch);
+
+                        Process p = Runtime.getRuntime().exec(inputToSubThread);
+                        InputStream out = p.getInputStream();
+                        Scanner fromProcess = new Scanner(out);
+                        try {
+
+                            while (fromProcess.hasNextLine()) {
+                                String temp = fromProcess.nextLine();
+                                System.out.println(temp);
+                                for (char i : temp.toCharArray())
+                                    sout.write(i);
+                                sout.write('\n');
+                                sout.write('\r');
+                            }
                         }
-                        sout.write('\r');
-                        sout.write('\n');
-                        //System.out.println();
+                        catch (Exception e)
+                        {
+                            String output = "Something gets wrong... Err code: "+ e.getStackTrace();
+                            System.out.println(output);
+                            for (char i : output.toCharArray())
+                                sout.write(i);
+                            sout.write('\n');
+                            sout.write('\r');
+                        }
+
+                        p.getErrorStream().close();
+                        p.getOutputStream().close();
+                        p.getInputStream().close();
+                        sout.flush();
+
                     }
-                    sout.flush();
-                    Runtime.getRuntime().exec("cmd /c copy NUL "+wayToTemp);
-                }
-                catch (Exception e)
-                {
-                    System.out.println("Error: "+e.getMessage());
-                }
+                    catch (Exception e) {
+                        System.out.println("Error: " + e.getMessage());
+                    }
+                }).start();
                 System.out.println(buffer);
                 buffer = "";
 
