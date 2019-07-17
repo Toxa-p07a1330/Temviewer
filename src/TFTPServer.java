@@ -65,17 +65,14 @@ public class TFTPServer {
         }
 
         try {
-            FileWriter fw = new FileWriter(new File(dest));
-
+            FileOutputStream writer = new FileOutputStream(new File(dest));
             byte[] bytes = sin.readAllBytes();
             System.out.println(1);
             for (byte b : bytes)
             {
-                System.out.print((char)b);
-                fw.append((char)b);
+                writer.write(b);
             }
-
-            fw.close();
+            writer.close();
         }
 
         catch (Exception e)

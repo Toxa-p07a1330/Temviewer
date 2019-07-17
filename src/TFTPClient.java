@@ -10,9 +10,13 @@ public class TFTPClient
     InputStream sin;
     OutputStream sout;
     String typeOfCommand, sourcePath, destPath;
+    String ip;
+    int port;
     int fileSize;
     public void run(String ip, int port)
     {
+        this.ip = ip;
+        this.port = port;
         try {
 
             socket = new Socket(ip, port);
@@ -23,11 +27,17 @@ public class TFTPClient
 
             while (true)
             {
-                input = keyboard.nextLine().split(" ");
-                typeOfCommand = input[0];
-                sourcePath = input[1];
-                destPath = input[2];
+                try {
 
+                    input = keyboard.nextLine().split(" ");
+                    typeOfCommand = input[0];
+                    sourcePath = input[1];
+                    destPath = input[2];
+                }
+                catch (Exception e)
+                {
+                    System.out.println("Bad input");
+                }
                 if (typeOfCommand.equals("get")){
                     get(sourcePath, destPath);
                     continue;
@@ -45,7 +55,6 @@ public class TFTPClient
 
             }
         catch (Exception e) {
-            System.out.println(2);
             System.out.println(e.getMessage());
 
         }
@@ -74,7 +83,10 @@ public class TFTPClient
                 sout.write(b);
             }
             sout.close();
-            System.out.println("Done");
+            socket = new Socket(ip, port);
+            sout = socket.getOutputStream();
+            sin = socket.getInputStream();
+            System.out.println("\nDone\n");
 
             }
 
