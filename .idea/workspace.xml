@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59ff44e6-3d84-49bc-876c-7c94a64943a5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/TelnetServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/TelnetServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Server/TelnetTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/TelnetTester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/TFTPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/TFTPServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/TFTPTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/TFTPTester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sandbox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sandbox.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TFTPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TFTPClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TFTPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TFTPServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TelnetServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TelnetServer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,8 +25,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TelnetServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1494">
-              <caret line="87" column="27" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
+            <state relative-caret-position="576">
+              <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="40" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -36,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TelnetClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="7" selection-start-line="7" selection-end-line="52" />
+            <state relative-caret-position="342">
+              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Sandbox.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="360">
+              <caret line="21" column="9" selection-start-line="11" selection-start-column="12" selection-end-line="21" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TFTPClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="723">
-              <caret line="55" column="75" selection-start-line="55" selection-start-column="75" selection-end-line="55" selection-end-column="75" />
+            <state relative-caret-position="378">
+              <caret line="75" column="25" lean-forward="true" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TFTPServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="525">
+              <caret line="85" column="6" lean-forward="true" selection-start-line="85" selection-start-column="6" selection-end-line="85" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,8 +101,8 @@
         <option value="$PROJECT_DIR$/src/Server.java" />
         <option value="$PROJECT_DIR$/src/TestServer.java" />
         <option value="$PROJECT_DIR$/../MailSender/src/Sender.java" />
-        <option value="$PROJECT_DIR$/src/Sandbox.java" />
         <option value="$PROJECT_DIR$/src/TelnetServer.java" />
+        <option value="$PROJECT_DIR$/src/Sandbox.java" />
         <option value="$PROJECT_DIR$/src/TFTPServer.java" />
         <option value="$PROJECT_DIR$/src/TFTPClient.java" />
       </list>
@@ -121,6 +122,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -149,7 +151,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -161,6 +162,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -189,7 +191,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TFTPTester" type="Application" factoryName="Application">
+    <configuration name="TFTPServer" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="TFTPTester" />
       <module name="Server" />
       <method v="2">
@@ -215,7 +217,7 @@
       <item itemvalue="Application.Sandbox" />
       <item itemvalue="Application.TelnetClient" />
       <item itemvalue="Application.TFTPClient" />
-      <item itemvalue="Application.TFTPTester" />
+      <item itemvalue="Application.TFTPServer" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -257,6 +259,14 @@
       <workItem from="1563295723218" duration="776000" />
       <workItem from="1563298068924" duration="1773000" />
       <workItem from="1563299877072" duration="114000" />
+      <workItem from="1563301097687" duration="1109000" />
+      <workItem from="1563351408489" duration="1783000" />
+      <workItem from="1563353353499" duration="258000" />
+      <workItem from="1563357688898" duration="1784000" />
+      <workItem from="1563359496682" duration="1786000" />
+      <workItem from="1563361304277" duration="133000" />
+      <workItem from="1563364788669" duration="1771000" />
+      <workItem from="1563366592147" duration="781000" />
     </task>
     <task id="LOCAL-00001" summary="Finished work with Telnet Server">
       <created>1563208961373</created>
@@ -290,7 +300,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40180000" />
+    <option name="totallyTimeSpent" value="49585000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -303,9 +313,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1928" height="1060" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33280087" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.36208734" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -314,7 +323,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32908705" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24097665" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24097665" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -380,8 +389,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TelnetServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1494">
-          <caret line="87" column="27" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
+        <state relative-caret-position="576">
+          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="40" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -390,8 +399,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TelnetClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="7" selection-start-line="7" selection-end-line="52" />
+        <state relative-caret-position="342">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -400,8 +409,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Sandbox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="360">
+          <caret line="21" column="9" selection-start-line="11" selection-start-column="12" selection-end-line="21" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -410,8 +419,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TFTPServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="525">
+          <caret line="85" column="6" lean-forward="true" selection-start-line="85" selection-start-column="6" selection-end-line="85" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -420,8 +429,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TFTPClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="723">
-          <caret line="55" column="75" selection-start-line="55" selection-start-column="75" selection-end-line="55" selection-end-column="75" />
+        <state relative-caret-position="378">
+          <caret line="75" column="25" lean-forward="true" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
