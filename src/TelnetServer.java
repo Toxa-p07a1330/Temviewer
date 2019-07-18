@@ -91,6 +91,11 @@ public class TelnetServer {
 
     }
 
+    public void run()
+    {
+        run(23);
+    }
+
     public void stop()
     {
         System.out.println("Server was stopped");
