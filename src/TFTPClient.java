@@ -1,5 +1,9 @@
 import java.io.*;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Random;
 import java.util.Scanner;
 
 public class TFTPClient
@@ -40,6 +44,7 @@ public class TFTPClient
             for (byte b : bytes)
                 sout.write(b);
             sout.close();
+            inicialization();
             System.out.println("\nDone\n");
             }
 
@@ -47,7 +52,30 @@ public class TFTPClient
             System.out.println(e.getMessage());
         }
     }
-    private void get(String sourcePath, String destPath){           //todo написать логику скачивания клииентом файла с сервера
+    private void get(String sourcePath, String destPath){
+        long sizeOfFile = 0;
+        try {
+
+
+            byte[] sizeBytes = new byte[Long.SIZE];
+           for (int i =0; i< Long.SIZE/Byte.SIZE; i++)
+           {
+               sizeBytes[i] = (byte)sin.read();
+               sizeOfFile*=256;
+               sizeOfFile+=sizeBytes[i];
+           }
+
+           FileOutputStream writer = new FileOutputStream(new File(destPath));
+           for (int i =0; i < sizeOfFile; i++)
+           {
+               writer.write(sin.read());
+           }
+           writer.close();
+           System.out.println("\nDONE\n");
+       }
+       catch (Exception e){
+            System.out.println(e.getMessage());
+       }
     }
     private void showErrorMessage()
     {

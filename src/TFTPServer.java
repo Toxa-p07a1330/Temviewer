@@ -1,6 +1,10 @@
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.SocketAddress;
+import java.nio.ByteBuffer;
+import java.util.ArrayList;
+import java.util.Random;
 
 
 //default port 69
@@ -23,7 +27,22 @@ public class TFTPServer {
             writeToFileFromSocket();
             System.out.print("\nDone\n");
     };
-    private  void get(String source, String dest){};        //todo написать логику отдачи сервером файла
+    private  void get(String source, String dest){
+        File sending = new File(source);
+        try {
+            FileInputStream readFromFile = new FileInputStream(sending);
+            byte[] arr = readFromFile.readAllBytes();
+            byte[] bytes = ByteBuffer.allocate(Long.SIZE / Byte.SIZE).putLong(sending.length()).array();
+            for (int i = 0; i<Long.SIZE / Byte.SIZE; i++)
+                sout.write(bytes[i]);
+            sout.flush();
+            for (byte b : arr)
+                sout.write(b);
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+    };
 
 
 
