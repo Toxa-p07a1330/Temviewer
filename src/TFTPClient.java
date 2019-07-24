@@ -142,7 +142,14 @@ class TFTPClientTester
 {
     public static void main(String[] args) {
         TFTPClient tftpClient = new TFTPClient();
-        tftpClient.run("localhost", 7777);
-
+        Scanner scanner = new Scanner(System.in);
+        try {
+            String ip = scanner.nextLine();
+            int port = scanner.nextInt();
+            tftpClient.run(ip, port);
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 }

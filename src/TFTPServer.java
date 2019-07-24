@@ -5,6 +5,7 @@ import java.net.SocketAddress;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 
 //default port 69
@@ -117,7 +118,8 @@ class TFTPTester
 {
     public static void main(String[] args) {
         TFTPServer telnetServer = new TFTPServer();
-        telnetServer.run(7777);
+        Scanner scanner = new Scanner(System.in);
+        telnetServer.run(new Scanner(System.in).nextInt());
     }
 }
 
